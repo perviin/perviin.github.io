@@ -3,17 +3,14 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaRss, FaSpinner, FaCalendar, FaExternalLinkAlt } from 'react-icons/fa';
 
-const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-const sujets = ['IA travail'];
+const apiKey = import.meta.env.VITE_NEWSDATA_API_KEY;
 
 interface Article {
   title: string;
   description: string;
-  url: string;
-  publishedAt: string;
-  source: {
-    name: string;
-  };
+  link: string; 
+  pubDate: string;
+  source: string;
 }
 
 export default function VeilleInfo() {
@@ -25,17 +22,15 @@ export default function VeilleInfo() {
     const fetchArticles = async () => {
       try {
         const response = await axios.get(
-          'https://newsapi.org/v2/everything', {
+          'https://newsdata.io/api/1/news', {
             params: {
-              q: sujets,
+              q: 'IA recrutement',
               language: 'fr',
-              sortBy: 'publishedAt',
-              pageSize: 3,
               apiKey: apiKey,
             }
           }
         );
-        setArticles(response.data.articles);
+        setArticles(response.data.results.slice(0, 3));
         setLoading(false);
       } catch (err) {
         setError('Erreur lors du chargement des articles');
@@ -45,7 +40,7 @@ export default function VeilleInfo() {
 
     fetchArticles();
   }, []);
-
+console.log(apiKey);
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('fr-FR', {
       year: 'numeric',
@@ -64,10 +59,10 @@ export default function VeilleInfo() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Veille Technologique</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Veille Informatique</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              L'IA dans le monde du travail: bonus ou malus ?
+              L'IA dans le monde: bonus ou malus ?
             </p>
           </div>
         </motion.div>
@@ -108,11 +103,11 @@ export default function VeilleInfo() {
                         <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2 space-x-4">
                           <span className="flex items-center">
                             <FaRss className="mr-2" />
-                            {article.source.name}
+                            {article.source}
                           </span>
                           <span className="flex items-center">
                             <FaCalendar className="mr-2" />
-                            {formatDate(article.publishedAt)}
+                            {formatDate(article.pubDate)}
                           </span>
                         </div>
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
@@ -123,7 +118,7 @@ export default function VeilleInfo() {
                         </p>
                       </div>
                       <a
-                        href={article.url}
+                        href={article.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="ml-4 p-2 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -151,7 +146,7 @@ export default function VeilleInfo() {
               <ul className="space-y-4 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-3 bg-indigo-500 rounded-full"></span>
-                  <span>Suivre les innovations en IA dans le secteur professionnel</span>
+                  <span>Suivre les innovations en IA</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-3 bg-indigo-500 rounded-full"></span>
@@ -159,7 +154,7 @@ export default function VeilleInfo() {
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-3 bg-indigo-500 rounded-full"></span>
-                  <span>Identifier les nouvelles opportunités professionnelles</span>
+                  <span>Identifier les nouvelles opportunités créer grâce à l'IA</span>
                 </li>
               </ul>
             </div>
