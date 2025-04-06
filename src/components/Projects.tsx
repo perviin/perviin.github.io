@@ -92,6 +92,15 @@ export default function Projects() {
       liveLink: "https://perviin-pokedex.netlify.app/"
     },
     {
+      title: "Pokéfight",
+      objectif: "Développement d'un jeu de simulation de combat pokémon sur un modèle de DS",
+      description: "Simple Simulateur de combat pokémon",
+      technologies: ["React", "TypeScript"],
+      time: "Temps de réalisation: En cours",
+      image: "/pokéfight.png",
+      githubLink: "https://github.com/perviin/Pokedex-JS"
+    },
+    {
       title: "Evently",
       objectif: "Utilisation de Laravel",
       description: "Plateforme de création et de répertorisation d'évènements à destination d'un public cible",
