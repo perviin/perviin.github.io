@@ -41,7 +41,7 @@ export default function Navbar() {
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
 
-      const sections = ['home', 'about', 'skills', 'projects', 'stage', 'certif', 'veille', 'contact'];
+      const sections = ['home', 'me', 'about', 'skills', 'projects', 'stage', 'certif', 'veille', 'contact'];
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element && window.scrollY >= element.offsetTop - 100) {
@@ -66,6 +66,7 @@ export default function Navbar() {
 
   const links = [
     { href: "#home", text: "Accueil" },
+    { href: "#me", text: "À propos" },
     { href: "#about", text: "BTS SIO" },
     { href: "#skills", text: "Compétences" },
     { href: "#projects", text: "Projets" },
@@ -77,29 +78,29 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full h-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg z-50">
-      <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500" style={{ width: `${scrollProgress}%` }}></div>
+      <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400" style={{ width: `${scrollProgress}%` }}></div>
 
       <div className="max-w-7xl mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
           <div className="flex-shrink-0 flex items-center">
-            <a href="#home" className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Pervin</a>
+            <a href="#home" className="text-2xl font-bold text-indigo-400 dark:text-indigo-400">Pervin</a>
           </div>
 
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-0">
             {links.map((link) => (
               <motion.a
                 key={link.href}
                 href={link.href}
                 className={`relative px-4 py-2 text-base font-medium transition-all duration-300
                   ${activeSection === link.href.substring(1) 
-                    ? 'text-indigo-600 dark:text-indigo-400' 
-                    : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
+                    ? 'text-Z dark:text-indigo-400' 
+                    : 'text-gray-700 dark:text-gray-300 hover:text-pink-300 dark:hover:text-pink-300'
                   }`}
                 whileHover={{ scale: 1.05 }}
               >
                 {link.text}
                 <motion.div
-                  className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-violet-500 to-fuchsia-500"
+                  className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400"
                   initial={false}
                   animate={{
                     scaleX: activeSection === link.href.substring(1) ? 1 : 0,

@@ -95,7 +95,7 @@ export default function ParticlesBackground() {
               size: 6,
               duration: 2,
               opacity: 0.8,
-              speed: 3
+              speed: 1
             },
             push: {
               quantity: 4

@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Me from './components/Me';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -18,7 +19,11 @@ function App() {
         <section id="home">
           <Hero />
         </section>
-        
+
+        <section id="me" className="py-20 bg-white dark:bg-gray-800">
+          <Me />
+        </section>
+
         <section id="about" className="py-20">
           <About />
         </section>

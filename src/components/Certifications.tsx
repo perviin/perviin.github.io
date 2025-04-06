@@ -20,12 +20,12 @@ export default function Certifications() {
       certificatLien: "/certifs/responsiveWebDesign.PNG"
     },
     {
-    titre: "MOOC",
-    organisme: "ANSSI - SecNum Academie",
-    date: "2023",
-    description: "Le MOOC de l'ANSSI permet de sensibiliser à la cybersécurité et de fournir les clés pour protéger ses données et systèmes contre les cyberattaques.",
-    image: "https://upload.wikimedia.org/wikipedia/fr/3/31/Anssi.png",
-    certificatLien: "/certifs/mooc-pervin.PNG"
+      titre: "MOOC",
+      organisme: "ANSSI - SecNum Academie",
+      date: "2023",
+      description: "Le MOOC de l'ANSSI permet de sensibiliser à la cybersécurité et de fournir les clés pour protéger ses données et systèmes contre les cyberattaques.",
+      image: "https://upload.wikimedia.org/wikipedia/fr/3/31/Anssi.png",
+      certificatLien: "/certifs/mooc-pervin.PNG"
     },
     {
       titre: "English for IT 1",
@@ -34,6 +34,37 @@ export default function Certifications() {
       description: "La certification English for IT 1 de Cisco améliore les compétences en anglais pour mieux comprendre le vocabulaire et les termes techniques de l'informatique.",
       image: "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
       certificatLien: "/certifs/english_for_it.pdf"
+    },
+    {
+      titre: "Intro. à la Cyber",
+      organisme: "Cisco",
+      date: "2024",
+      description: "La certification Introcution à cybersécurité de Cisco permet une introduction en douceur des différents concepts liés à la cybersécurité ainsi qu'aux enjeux de celle-ci.",
+      image: "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+      certificatLien: "/certifs/pervinEREN_IntroductionCyber.PNG"
+    },
+    {
+      titre: "Découverte de Linux",
+      organisme: "Cisco",
+      date: "2024",
+      description: "La certification Découverte de Linux de Cisco permet un apprentissage des bases du système d'exploitation de Linux, permettant une utilisation complète de cet OS.",
+      image: "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+      certificatLien: "/certifs/pervinEren_decouverteLinux.PNG"
+    },
+    {
+      titre: "Networking Essentials",
+      organisme: "Cisco",
+      date: "2024",
+      description: "La certification Networking Essentials de Cisco permet de comprendre les bases du Networking en assurant que ces bases puissent-être utilisé dans un contexte professionel.",
+      image: "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+      certificatLien: "/certifs/pervinEren_networkingEssentials.PNG"
+    },
+    {
+      titre: "JavaScript Algorithms and Data Structures (EN COURS)",
+      organisme: "freeCodeCamp",
+      date: "2025",
+      description: "La certification JavaScript Algorithms and Data Structures de freeCodeCamp permet d'assimiler les bases de JavaScript tout en les approfondissant dans la même certification.",
+      image: "https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg",
     },
   ];
 

@@ -24,7 +24,7 @@ export default function VeilleInfo() {
         const response = await axios.get(
           'https://newsdata.io/api/1/news', {
             params: {
-              q: 'IA recrutement',
+              q: 'IA',
               language: 'fr',
               apiKey: apiKey,
             }
@@ -61,7 +61,13 @@ export default function VeilleInfo() {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Veille Informatique</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              L'IA dans le monde: bonus ou malus ?
+              L'IA dans la vie quotidienne: bonus ou malus ?
+            </p>
+            <p className="text-md text-gray-600 dark:text-gray-400 mt-2">
+              <strong>Qu'est-ce qu'une "Veille Informatique" ?</strong> Une veille informatique consiste à surveiller de manière continue les évolutions technologiques, les tendances du marché, et les innovations dans le domaine de l'informatique. Elle permet de se tenir informé des dernières avancées, de comprendre les enjeux actuels et futurs, et d’anticiper les évolutions qui pourraient impacter notre travail, nos projets ou la société en général. La veille est un outil indispensable pour tout professionnel du secteur technologique, car elle aide à prendre des décisions éclairées et à s'adapter rapidement aux changements.
+            </p>
+            <p className="text-md text-gray-600 dark:text-gray-400 mt-2">
+              <strong>Pourquoi ce thème si large ?</strong>  L'intelligence artificielle est aujourd'hui au cœur de nombreuses évolutions technologiques et sociales. Dans un monde où l'IA devient presque indispensable pour certaines personnes, une question se pose : cette dépendance pourrait-elle nuire à l'autonomie et à notre capacité à réfléchir par nous-mêmes ? Les avantages sont nombreux, mais à quel prix ? Que se passerait-il si l'IA cessait d'exister ou devenait obsolète ? Cette réflexion m'intéresse particulièrement, car elle interroge l'avenir et la manière dont nous intégrons les technologies dans notre vie, notamment dans la quête de sens et d'équilibre dans un monde toujours plus automatisé.
             </p>
           </div>
         </motion.div>
