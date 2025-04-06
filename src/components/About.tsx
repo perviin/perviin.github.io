@@ -12,7 +12,7 @@ export default function About() {
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">BTS SIO</h2>
         <p className="text-1xl text-gray-600 dark:text-gray-300">Brevet de Technicien Supérieur Services Informatiques aux Organisations</p>
-        <p className="text-m py-2 text-dark-600 dark:text-gray-300">Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégré directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
+        <p className="text-m py-2 text-dark-600 dark:text-gray-300">Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégrer directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
         <p className="text-xl py-2 text-dark-600 dark:text-gray-300">Le BTS SIO propose deux spécialités :</p>
       </motion.div>
 
