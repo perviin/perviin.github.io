@@ -15,7 +15,7 @@ export default function Stage() {
       entreprise: "JANIN Consulting",
       periode: "Janvier - Mars 2024",
       description: "Stage de deuxième année en tant que développeuse fullstack.",
-      //rapport: "/rapports/stage2.pdf",
+      rapport: "/rapports/stage2.pdf",
       technologies: ["Angular", "Java Spring Boot"]
     },
     {
