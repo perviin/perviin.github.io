@@ -98,7 +98,7 @@ export default function Projects() {
       technologies: ["React", "TypeScript"],
       time: "Temps de réalisation: En cours",
       image: "/pokéfight.png",
-      githubLink: "https://github.com/perviin/Pokedex-JS"
+      githubLink: "https://github.com/perviin/PokeFight"
     },
     {
       title: "Evently",
