@@ -38,6 +38,10 @@ export default function Stage() {
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Stages</h2>
         <p className="text-xl text-gray-600 dark:text-gray-300">Mes expériences professionnelles</p>
+        <div className="flex justify-center mt-5 gap-4">
+          <a href="/synth/Pervin-Synthèse.pdf" target="_blank" className="inline-flex items-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors">Visualiser mon tableau de synthèse</a>
+          <a href="/synth/Pervin-Synthèse.pdf" target="_blank" download className="inline-flex items-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors">Télécharger mon tableau de synthèse</a>
+        </div>
       </motion.div>
 
       <div className="relative">
