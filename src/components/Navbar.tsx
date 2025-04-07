@@ -94,7 +94,7 @@ export default function Navbar() {
                 className={`relative px-4 py-2 text-base font-medium transition-all duration-300
                   ${activeSection === link.href.substring(1) 
                     ? 'text-Z dark:text-indigo-400' 
-                    : 'text-gray-700 dark:text-gray-300 hover:text-pink-300 dark:hover:text-pink-300'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-indigo-300 dark:hover:text-indigo-300'
                   }`}
                 whileHover={{ scale: 1.05 }}
               >
