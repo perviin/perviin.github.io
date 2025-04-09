@@ -12,7 +12,7 @@ export default function About() {
         className="text-center mb-16"
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">À propos de moi</h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300">Développeur web passionné et étudiant en BTS SIO</p>
+        <p className="text-xl text-gray-600 dark:text-gray-300">Développeuse passionnée et étudiante en BTS SIO</p>
       </motion.div>
 
       <div className="flex flex-col md:flex-row items-center gap-12">
@@ -41,10 +41,10 @@ export default function About() {
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700">
             <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Qui suis-je ?</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Bonjour, je suis étudiante en BTS SIO option SLAM, passionnée par le développement web et les technologies modernes.
+                Bonjour, je suis étudiante en BTS SIO option SLAM à l'ENC Bessières à Paris 17e. Je suis passionnée par le développement web et les technologies modernes.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-                Mon objectif est de devenir une développeur logicielle polyvalente, capable de concevoir des solutions numériques 
+                Mon objectif est de devenir une développeuse logicielle polyvalente, capable de concevoir des solutions numériques 
                 innovantes et centrées sur les utilisateurs finaux. Curieuse et motivée, je suis constamment en quête de nouveaux savoirs 
                 et d'amélioration continue.
             </p>
