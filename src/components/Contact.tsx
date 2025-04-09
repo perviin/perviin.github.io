@@ -28,7 +28,9 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-400 dark:focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                    required
                   />
                 </div>
                 <div>
@@ -36,7 +38,9 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-400 dark:focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                    required
                   />
                 </div>
               </div>
@@ -45,15 +49,19 @@ export default function Contact() {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-400 dark:focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                  required
                 />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={6}
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-400 dark:focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors resize-none"
+                  required
                 ></textarea>
               </div>
               <button
