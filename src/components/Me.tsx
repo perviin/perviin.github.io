@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { FaUser } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaUser } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -11,12 +11,15 @@ export default function About() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">À propos de moi</h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300">Développeuse passionnée et étudiante en BTS SIO</p>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          À propos de moi
+        </h2>
+        <p className="text-xl text-gray-600 dark:text-gray-300">
+          Future Ingénieure Logiciel & Exploratrice de Technologies Globales !
+        </p>
       </motion.div>
 
       <div className="flex flex-col md:flex-row items-center gap-12">
-        {/* Photo de profil circulaire */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -25,12 +28,10 @@ export default function About() {
           className="md:w-1/3 flex justify-center"
         >
           <div className="w-64 h-64 rounded-full bg-white dark:bg-gray-800 overflow-hidden border-4 border-indigo-500 shadow-lg flex items-center justify-center">
-            {/* Placeholder pour la photo - à remplacer par votre image */}
             <FaUser className="w-32 h-32 text-gray-300 dark:text-gray-600" />
           </div>
         </motion.div>
 
-        {/* Description à droite */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -39,14 +40,21 @@ export default function About() {
           className="md:w-2/3"
         >
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Qui suis-je ?</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+              Qui suis-je ?
+            </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Bonjour, je suis étudiante en BTS SIO option SLAM à l'ENC Bessières à Paris 17e. Je suis passionnée par le développement web et les technologies modernes.
+              Bonjour, je suis actuellement étudiante alternante à l'EFREI
+              Paris, et en alternance au Ministère de l'Education Nationale !
+              Passionée de nouvelles technologies et de développement logiciel,
+              apprendre est une notion importante et fondamentales à mes yeux.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-                Mon objectif est de devenir une développeuse logicielle polyvalente, capable de concevoir des solutions numériques 
-                innovantes et centrées sur les utilisateurs finaux. Curieuse et motivée, je suis constamment en quête de nouveaux savoirs 
-                et d'amélioration continue.
+              Mon objectif est de devenir une développeuse logicielle
+              polyvalente, capable de concevoir des solutions numériques
+              innovantes et centrées sur les utilisateurs finaux. Curieuse et
+              motivée, je suis constamment en quête de nouveaux savoirs et
+              d'amélioration continue.
             </p>
           </div>
         </motion.div>

@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 interface Project {
   title: string;
-  objectif: string,
+  objectif: string;
   description: string;
   technologies: string[];
-  time: string,
+  time: string;
   image: string;
   githubLink?: string;
   liveLink?: string;
@@ -16,13 +16,14 @@ export default function Projects() {
   const Projects: Project[] = [
     {
       title: "ToDo List App",
-      objectif: "Utilisation de Vue.js",
-      description: "Application de gestion de tâches.",
-      technologies: ["Vue.js"],
-      time: "Temps de réalisation: 2h",
-      image: "/todo.png",
-      githubLink: "https://github.com/perviin/ToDo-Vue",
-      liveLink: "https://perviin-todo.netlify.app/"
+      objectif: "Les bases de JavaScript",
+      description:
+        "Application de gestion de tâches. intéragissez avec le chien, il y a des surprises !. (inspiration du travail de Toby Fox)",
+      technologies: ["Html5", "CSS3", "JavaScript ES6+"],
+      time: "Temps de réalisation: 1h",
+      image: "/media/todo.png",
+      githubLink: "https://github.com/perviin/ToDoList-Js",
+      liveLink: "https://perviin-todolist.netlify.app/",
     },
     {
       title: "Weather App",
@@ -30,19 +31,20 @@ export default function Projects() {
       description: "Application météo",
       technologies: ["React"],
       time: "Temps de réalisation: 3h",
-      image: "/weather.png",
+      image: "/media/weather.png",
       githubLink: "https://github.com/perviin/react_weather-app",
-      liveLink: "https://perviin-weather-app.netlify.app/"
+      liveLink: "https://perviin-weather-app.netlify.app/",
     },
     {
       title: "Îles en 3d",
-      objectif: "Utilisation de three.js pour permettre le render 3d sur des pages web",
+      objectif:
+        "Utilisation de three.js pour permettre le render 3d sur des pages web",
       description: "Render 3d d'îles réaliser en blender",
       technologies: ["Three.js", "Blender"],
       time: "Temps de réalisation: 1h",
-      image: "/island.png",
+      image: "/media/iles.png",
       githubLink: "https://github.com/perviin/Iles-three.js",
-      liveLink: "https://perviin-iles.netlify.app/"
+      liveLink: "https://perviin-iles.netlify.app/",
     },
     {
       title: "Chrome Dinosaure",
@@ -65,7 +67,8 @@ export default function Projects() {
     {
       title: "WhacAMole",
       objectif: "Pour approfondir Java Swing",
-      description: "Jeu où il faut taper sur mes taupes afin de gagner des points et si",
+      description:
+        "Jeu où il faut taper sur mes taupes afin de gagner des points et si",
       technologies: ["Java", "Swing"],
       time: "Temps de réalisation: 1h",
       image: "/whac.png",
@@ -77,33 +80,37 @@ export default function Projects() {
       description: "Plateforme recréant le visuel de spotify",
       technologies: ["Vue.js"],
       time: "Temps de réalisation: 1h30",
-      image: "/spotify.png",
+      image: "/media/spotify.png",
       githubLink: "https://github.com/perviin/Spotify-clone-VUE",
-      liveLink: "https://perviin-spotify.netlify.app/"
+      liveLink: "https://perviin-spotify.netlify.app/",
     },
     {
       title: "Pokedex en JS",
-      objectif: "Création d'un pokédex basé sur le jeu pokémon rouge, bleu et jaune",
+      objectif:
+        "Création d'un pokédex basé sur le jeu pokémon rouge, bleu et jaune",
       description: "Pokédex virtuel",
       technologies: ["JavaScript ES6+"],
       time: "Temps de réalisation: 1h30",
-      image: "/pokedex.png",
+      image: "/media/pokedex.png",
       githubLink: "https://github.com/perviin/Pokedex-JS",
-      liveLink: "https://perviin-pokedex.netlify.app/"
+      liveLink: "https://perviin-pokedex.netlify.app/",
     },
     {
       title: "Pokéfight",
-      objectif: "Développement d'un jeu de simulation de combat pokémon sur un modèle de DS",
+      objectif:
+        "Développement d'un jeu de simulation de combat pokémon sur un modèle de DS",
       description: "Simple Simulateur de combat pokémon",
       technologies: ["React", "TypeScript"],
       time: "Temps de réalisation: En cours",
-      image: "/pokéfight.png",
-      githubLink: "https://github.com/perviin/PokeFight"
+      image: "/media/pokefight.png",
+      githubLink: "https://github.com/perviin/PokeFight",
+      liveLink: "https://perviin-pokefight.netlify.app/",
     },
     {
       title: "Evently",
       objectif: "Utilisation de Laravel",
-      description: "Plateforme de création et de répertorisation d'évènements à destination d'un public cible",
+      description:
+        "Plateforme de création et de répertorisation d'évènements à destination d'un public cible",
       technologies: ["Laravel", "Node.js"],
       time: "Temps de réalisation: En cours",
       image: "/evently.png",
@@ -111,7 +118,12 @@ export default function Projects() {
     },
   ];
 
-  const ProjectSection = ({ projects }: { title: string, projects: Project[] }) => (
+  const ProjectSection = ({
+    projects,
+  }: {
+    title: string;
+    projects: Project[];
+  }) => (
     <div className="mb-16">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
@@ -125,16 +137,22 @@ export default function Projects() {
           >
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h4>
-                <h5 className='text-l font-semibold text-gray-900 dark:text-white mb-2'>{project.objectif}</h5>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">{project.description}</p>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  {project.title}
+                </h4>
+                <h5 className="text-l font-semibold text-gray-900 dark:text-white mb-2">
+                  {project.objectif}
+                </h5>
+                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -145,8 +163,10 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <p className='text-m text-gray-900 dark:text-white mb-2'>{project.time}</p>
-                <div className='flex gap-4'>
+                <p className="text-m text-gray-900 dark:text-white mb-2">
+                  {project.time}
+                </p>
+                <div className="flex gap-4">
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
@@ -187,8 +207,12 @@ export default function Projects() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projets</h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300">Découvrez mes réalisations</p>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Projets
+        </h2>
+        <p className="text-xl text-gray-600 dark:text-gray-300">
+          Découvrez mes réalisations
+        </p>
       </motion.div>
 
       <ProjectSection title="Projets Personnels" projects={Projects} />
