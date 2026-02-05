@@ -35,7 +35,7 @@ export default function About() {
             {t("about.slam.description")}
           </p>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-            {t("about.slam.skills", { returnObjects: true }).map(
+            {(t("about.slam.skills", { returnObjects: true }) as string[]).map(
               (skill: string, idx: number) => (
                 <li key={idx}>{skill}</li>
               ),
@@ -57,7 +57,7 @@ export default function About() {
             {t("about.sisr.description")}
           </p>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-            {t("about.sisr.skills", { returnObjects: true }).map(
+            {(t("about.sisr.skills", { returnObjects: true }) as string[]).map(
               (skill: string, idx: number) => (
                 <li key={idx}>{skill}</li>
               ),
