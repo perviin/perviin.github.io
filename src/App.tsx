@@ -9,10 +9,12 @@ import VeilleInfo from "./components/VeilleInfo";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import LanguageNotification from "./components/LanguageNotification";
 
 function App() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <LanguageNotification />
       <Navbar />
       <main>
         <section id="home">

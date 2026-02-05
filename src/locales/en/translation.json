@@ -18,7 +18,7 @@
     "heading": "About Me",
     "subheading": "Future Software Engineer & Technology Global Explorer!",
     "title": "Who am I?",
-    "text1": "Hello, I am currently an alternating student at EFREI Paris, and on an internship at the National Ministry of Education! Passionate about new technologies and software development, learning is an important and fundamental notion in my eyes.",
+    "text1": "Hello, I am currently an alternating student at EFREI Paris, and interning at the National Ministry of Education! Passionate about new technologies and software development, learning is an important and fundamental notion in my eyes.",
     "text2": "My goal is to become a versatile software developer, capable of designing innovative digital solutions centered on end users. Curious and motivated, I am constantly seeking new knowledge and continuous improvement."
   },
   "skills": {
@@ -26,62 +26,326 @@
     "subheading": "My technical and professional skills",
     "viewCV": "View my CV",
     "downloadCV": "Download my CV",
-    "categories": {
-      "design": {
+    "categories": [
+      {
         "title": "DESIGN & UI/UX",
-        "description": "Create modern and user-friendly interfaces."
+        "description": "Create modern and user-friendly interfaces.",
+        "skills": ["Figma", "Canva", "Adobe XD", "Tailwind CSS", "Bootstrap"]
       },
-      "frontend": {
+      {
         "title": "FRONT-END",
-        "description": "Build interactive and high-performance web interfaces."
+        "description": "Build interactive and high-performance web interfaces.",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "JavaScript ES6+",
+          "TypeScript",
+          "Vue.js",
+          "React.js",
+          "Angular",
+          "Swing",
+          "Tailwind CSS"
+        ]
       },
-      "backend": {
+      {
         "title": "BACK-END",
-        "description": "Develop robust servers and scalable APIs."
+        "description": "Develop robust servers and scalable APIs.",
+        "skills": [
+          "PHP 8.4",
+          "Java SE 23",
+          "Python 3.14",
+          "Node.js",
+          "Laravel",
+          "Spring Boot",
+          "Symfony"
+        ]
       },
-      "database": {
+      {
         "title": "DATABASES",
-        "description": "Design and manage high-performance databases."
+        "description": "Design and manage high-performance databases.",
+        "skills": ["SQL 2023", "HeidiSQL", "SQL Server", "PHP MyAdmin"]
       },
-      "api": {
+      {
         "title": "API & WEB SERVICES",
-        "description": "Develop and test high-performance REST APIs."
+        "description": "Develop and test high-performance REST APIs.",
+        "skills": ["API REST", "Postman"]
       },
-      "devops": {
+      {
         "title": "DEVOPS & CONTAINERIZATION",
-        "description": "Automate deployments and manage environments."
+        "description": "Automate deployments and manage environments.",
+        "skills": ["Docker", "Git", "GitHub", "Kubernetes"]
       },
-      "tools": {
+      {
         "title": "TOOLS & IDE",
-        "description": "Use the best development environments."
+        "description": "Use the best development environments.",
+        "skills": [
+          "VS Code",
+          "JetBrains Suite",
+          "Eclipse IDE",
+          "Spyder",
+          "Git",
+          "GitHub"
+        ]
       }
-    }
+    ]
   },
   "projects": {
-    "heading": "Projects",
-    "subheading": "Discover my achievements",
-    "seeCode": "See code",
-    "seeDemo": "See demo"
+    "heading": "My Projects",
+    "subheading": "Exploring new technologies through practical projects",
+    "seeCode": "See Code",
+    "seeDemo": "See Demo",
+    "time": "Time: ",
+    "list": [
+      {
+        "title": "ToDo List App",
+        "objectif": "JavaScript Basics",
+        "description": "Task management application. Interact with the dog, there are surprises! (inspired by Toby Fox's work)",
+        "technologies": ["Html5", "CSS3", "JavaScript ES6+"],
+        "time": "1 hour",
+        "image": "/media/todo.png",
+        "githubLink": "https://github.com/perviin/ToDoList-Js",
+        "liveLink": "https://perviin-todolist.netlify.app/"
+      },
+      {
+        "title": "Weather App",
+        "objectif": "REST API Usage",
+        "description": "Weather application",
+        "technologies": ["React", "Vite", "API REST"],
+        "time": "3 hours",
+        "image": "/media/weather.png",
+        "githubLink": "https://github.com/perviin/weather-app",
+        "liveLink": "https://perviin-weather.netlify.app/"
+      },
+      {
+        "title": "3D Islands",
+        "objectif": "Using three.js to enable 3D rendering on web pages",
+        "description": "3D rendering of islands created in Blender",
+        "technologies": ["Three.js", "Blender"],
+        "time": "1 hour",
+        "image": "/media/iles.png",
+        "githubLink": "https://github.com/perviin/Iles-three.js",
+        "liveLink": "https://perviin-iles.netlify.app/"
+      },
+      {
+        "title": "Chrome Dinosaur",
+        "objectif": "First use of Java Swing",
+        "description": "Chrome's dinosaur game",
+        "technologies": ["Java", "Swing"],
+        "time": "1 hour",
+        "image": "/media/dino.png",
+        "githubLink": "https://github.com/perviin/ChromDino-JAVA"
+      },
+      {
+        "title": "Banking Program",
+        "objectif": "Learn the basics of Python in a professional context",
+        "description": "Personal finance management program in Python",
+        "technologies": ["Python"],
+        "time": "30 minutes",
+        "image": "/media/banque.png",
+        "githubLink": "https://github.com/perviin/ProgrammeBanque_Python"
+      },
+      {
+        "title": "Whack-A-Mole",
+        "objectif": "Deepen Java Swing knowledge",
+        "description": "Game where you hit moles to earn points",
+        "technologies": ["Java", "Swing"],
+        "time": "1 hour",
+        "image": "/media/whacamole.png",
+        "githubLink": "https://github.com/perviin/WhacAMole-JAVA"
+      },
+      {
+        "title": "Pokedex in JS",
+        "objectif": "Create a Pokedex based on Pokemon Red, Blue, and Yellow",
+        "description": "Virtual Pokedex",
+        "technologies": ["JavaScript ES6+"],
+        "time": "1 hour 30 minutes",
+        "image": "/media/pokedex.png",
+        "githubLink": "https://github.com/perviin/Pokedex-JS",
+        "liveLink": "https://perviin-pokedex.netlify.app/"
+      },
+      {
+        "title": "Pokéfight",
+        "objectif": "Development of a Pokemon battle simulation game based on DS model",
+        "description": "Simple Pokemon battle simulator",
+        "technologies": ["React", "TypeScript"],
+        "time": "2 days",
+        "image": "/media/pokefight.png",
+        "githubLink": "https://github.com/perviin/PokeFight",
+        "liveLink": "https://perviin-pokefight.netlify.app/"
+      },
+      {
+        "title": "Evently",
+        "objectif": "Laravel usage",
+        "description": "Platform for creating and organizing events for a target audience",
+        "technologies": ["Laravel", "Node.js"],
+        "time": "In progress",
+        "image": "/media/evently.png",
+        "githubLink": "https://github.com/perviin/Gestion-events-LARAVEL"
+      },
+      {
+        "title": "Student Management System",
+        "objectif": "Create a fullstack student management application",
+        "description": "Online student management",
+        "technologies": [
+          "JavaScript ES6+",
+          "Node.js",
+          "Java",
+          "Spring Boot",
+          "C#",
+          "Docker",
+          "Kubernetes",
+          "MySQL",
+          "TypeScript"
+        ],
+        "time": "3 days",
+        "image": "/media/student-management.png",
+        "githubLink": "https://github.com/perviin/student-managment"
+      },
+      {
+        "title": "Expense Tracker",
+        "objectif": "Create a complete Python expense management application",
+        "description": "Personal expense management",
+        "technologies": ["Python", "NumPy", "Pandas"],
+        "time": "2 days",
+        "image": "/media/expense.png",
+        "githubLink": "https://github.com/perviin/expense-tracker"
+      },
+      {
+        "title": "Docker Student Management App",
+        "objectif": "Create a complete student management application",
+        "description": "Student management with Docker",
+        "technologies": ["Python", "NumPy", "Pandas", "Docker"],
+        "time": "2 days",
+        "image": "/media/docker.png",
+        "githubLink": "https://github.com/perviin/examen-docker"
+      }
+    ]
   },
   "experience": {
     "heading": "Professional Experience",
     "subheading": "Experiences that have shaped me as a developer",
-    "technologiesUsed": "Technologies used:",
-    "seeReport": "See report"
+    "technologiesUsed": "Technologies:",
+    "seeReport": "See Report",
+    "list": [
+      {
+        "entreprise": "Ministry of Education",
+        "periode": "September 2025 - Present",
+        "description": "Development and improvement of an internal application for managing researchers' digital contracts within the ministry.",
+        "technologies": ["PHP Symfony"],
+        "rapport": null
+      },
+      {
+        "entreprise": "JANIN Consulting",
+        "periode": "January - March 2024",
+        "description": "Second-year internship as a fullstack developer.",
+        "technologies": ["Angular", "Java Spring Boot"],
+        "rapport": "/rapports/stage2.pdf"
+      },
+      {
+        "entreprise": "DesCodeuses",
+        "periode": "June - July 2023",
+        "description": "First-year internship as a web developer and IT technician",
+        "technologies": ["HTML5", "CSS3", "JavaScript ES6+"],
+        "rapport": "/rapports/stage1.pdf"
+      }
+    ]
   },
   "certifications": {
     "heading": "Certifications",
-    "subheading": "My certifications and diplomas",
-    "viewCertification": "View certification"
+    "subheading": "My professional certifications",
+    "viewCertification": "View Certification",
+    "list": [
+      {
+        "titre": "Responsive Web Design",
+        "organisme": "freeCodeCamp",
+        "date": "2023",
+        "description": "The FreeCodeCamp Responsive Web Design certification teaches the basics of HTML5, CSS3, and adaptive design techniques, allowing you to create modern websites optimized for all types of screens.",
+        "image": "https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg",
+        "certificatLien": "/certifs/responsiveWebDesign.PNG"
+      },
+      {
+        "titre": "Cybersecurity MOOC",
+        "organisme": "ANSSI - SecNum Academy",
+        "date": "2023",
+        "description": "The ANSSI MOOC raises awareness of cybersecurity and provides the keys to protect your data and systems against cyberattacks.",
+        "image": "https://upload.wikimedia.org/wikipedia/fr/3/31/Anssi.png",
+        "certificatLien": "/certifs/mooc-pervin.PNG"
+      },
+      {
+        "titre": "English for IT 1",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "The Cisco English for IT 1 certification improves English skills to better understand IT vocabulary and technical terms.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/english_for_it.pdf"
+      },
+      {
+        "titre": "Introduction to Cybersecurity",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "The Cisco Introduction to Cybersecurity certification provides a gentle introduction to different cybersecurity concepts and challenges.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/pervinEREN_IntroductionCyber.PNG"
+      },
+      {
+        "titre": "Discovery of Linux",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "The Cisco Discovery of Linux certification teaches the basics of the Linux operating system, allowing complete use of this OS.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/pervinEren_decouverteLinux.PNG"
+      },
+      {
+        "titre": "Networking Essentials",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "The Cisco Networking Essentials certification helps you understand the basics of networking to ensure these fundamentals can be used in a professional context.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/pervinEren_networkingEssentials.PNG"
+      },
+      {
+        "titre": "JavaScript Algorithms and Data Structures",
+        "organisme": "freeCodeCamp",
+        "date": "2025",
+        "description": "The freeCodeCamp JavaScript Algorithms and Data Structures certification teaches the basics of JavaScript while deepening understanding within the same certification.",
+        "image": "https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg",
+        "certificatLien": null
+      }
+    ]
+  },
+  "about": {
+    "heading": "About - BTS SIO",
+    "btsDescription": "Currently completing my BTS in IT Solutions Organization",
+    "slam": {
+      "title": "SLAM (Solutions Logicielles et Applications Métier)",
+      "description": "Business Software Solutions & Applications",
+      "skills": [
+        "Web Development",
+        "Mobile Development",
+        "Database Design",
+        "API Development",
+        "Software Architecture"
+      ]
+    },
+    "sisr": {
+      "title": "SISR (Solutions d'Infrastructure, Serveurs et Réseaux)",
+      "description": "Infrastructure, Servers & Networks Solutions",
+      "skills": [
+        "System Administration",
+        "Network Management",
+        "Infrastructure Design",
+        "Cloud Solutions",
+        "Cybersecurity"
+      ]
+    }
   },
   "veille": {
-    "heading": "Tech Monitoring",
-    "introTitle": "Tech Monitoring",
-    "subtitle": "AI in daily life: bonus or downside?",
-    "definition": "What is \"Tech Monitoring\"?",
-    "definitionText": "Tech monitoring consists of continuously tracking technological developments, market trends, and innovations in the IT field. It allows you to stay informed about the latest advances, understand current and future challenges, and anticipate changes that could impact our work, projects or society in general. Monitoring is an essential tool for any technology professional, as it helps make informed decisions and adapt quickly to changes.",
+    "heading": "Tech News",
+    "subtitle": "Monitoring the latest technological trends and innovations",
+    "definition": "What is Technology Watch?",
+    "definitionText": "Technology watch consists of continuously tracking technological developments, market trends, and innovations in the IT field. It allows you to stay informed about the latest advances, understand current and future challenges, and anticipate changes that could impact our work, projects or society in general.",
     "whyTheme": "Why this broad topic?",
-    "whyThemeText": "Artificial intelligence is now at the heart of many technological and social developments. In a world where AI is becoming almost indispensable for some people, a question arises: could this dependence harm our autonomy and our ability to think for ourselves? The advantages are numerous, but at what cost? What if AI ceased to exist or became obsolete? This reflection interests me particularly, because it questions the future and the way we integrate technologies into our lives, especially in the quest for meaning and balance in an increasingly automated world.",
+    "whyThemeText": "Artificial intelligence is now at the heart of many technological and social developments. In a world where AI is becoming almost indispensable for some people, a question arises: could this dependence harm our autonomy and our ability to think for ourselves?",
     "latestNews": "Latest News",
     "objectives": "Objectives",
     "objective1": "Follow AI innovations",
@@ -90,49 +354,21 @@
     "sources": "Sources",
     "source1": "Using API to automate articles",
     "source2": "Articles from Newsletter",
-    "source3": "Regular and constant reports",
-    "errorLoading": "Error loading articles"
+    "source3": "Regular and constant monitoring",
+    "error": "Unable to load tech news"
   },
   "contact": {
-    "heading": "Contact",
-    "subheading": "Feel free to contact me",
+    "heading": "Get in Touch",
+    "subheading": "Feel free to contact me for any inquiries",
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
-    "send": "Send",
+    "send": "Send Message",
     "github": "GitHub",
     "linkedin": "LinkedIn"
   },
   "footer": {
     "copyright": "All rights reserved."
-  },
-  "about": {
-    "title": "BTS SIO",
-    "subtitle": "Brevet de Technicien Supérieur Services Informatiques aux Organisations",
-    "description": "The Brevet de Technicien Supérieur in Services Informatiques aux Organisations (BTS SIO) is designed for those who wish to train in two years for careers as a network administrator or developer. To then enter the job market directly or continue studies in the IT field.",
-    "specialties": "BTS SIO offers two specialties:",
-    "slam": {
-      "title": "Option SLAM",
-      "subtitle": "Software Solutions and Business Applications",
-      "skills": [
-        "Application Development",
-        "Object-oriented Programming",
-        "Web and Mobile Development",
-        "Databases",
-        "Cybersecurity"
-      ]
-    },
-    "sisr": {
-      "title": "Option SISR",
-      "subtitle": "Infrastructure Solutions, Systems and Networks",
-      "skills": [
-        "System Administration",
-        "Computer Networks",
-        "Virtualization",
-        "Infrastructure Services",
-        "System Security"
-      ]
-    }
   }
 }

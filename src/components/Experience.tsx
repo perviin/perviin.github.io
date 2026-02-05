@@ -12,31 +12,9 @@ interface Experience {
 
 export default function Experience() {
   const { t } = useTranslation();
-  const stages: Experience[] = [
-    {
-      entreprise: "Ministère de l'Éducation Nationale",
-      periode: "Septembre 2025 - Présent",
-      description:
-        "Développement et amélioration d'une application interne visant à gérer les contrats numériques des chercheursau sein du ministère.",
-      technologies: ["PHP Symfony"],
-    },
-    {
-      entreprise: "JANIN Consulting",
-      periode: "Janvier - Mars 2024",
-      description:
-        "Stage de deuxième année en tant que développeuse fullstack.",
-      rapport: "/rapports/stage2.pdf",
-      technologies: ["Angular", "Java Spring Boot"],
-    },
-    {
-      entreprise: "DesCodeuses",
-      periode: "Juin - Juillet 2023",
-      description:
-        "Stage de première année en tant que développeuse web et technicienne informatique",
-      rapport: "/rapports/stage1.pdf",
-      technologies: ["HTML5", "CSS3", "JavaScript ES6+"],
-    },
-  ];
+  const stages: Experience[] = t("experience.list", {
+    returnObjects: true,
+  }) as Experience[];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

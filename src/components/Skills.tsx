@@ -18,76 +18,28 @@ interface SkillCategory {
 
 export default function Skills() {
   const { t } = useTranslation();
-  const skillCategories: SkillCategory[] = [
-    {
-      icon: <FaPalette className="w-8 h-8" />,
-      title: "DESIGN & UI/UX",
-      description: "Créer des interfaces modernes et ergonomiques.",
-      skills: ["Figma", "Canva", "Adobe XD", "Tailwind CSS", "Bootstrap"],
-    },
-    {
-      icon: <FaCode className="w-8 h-8" />,
-      title: "FRONT-END",
-      description:
-        "Construire des interfaces web interactives et performantes.",
-      skills: [
-        "HTML5",
-        "CSS3",
-        "JavaScript ES6+",
-        "TypeScript",
-        "Vue.js",
-        "React.js",
-        "Angular",
-        "Swing",
-        "Tailwind CSS",
-      ],
-    },
-    {
-      icon: <FaServer className="w-8 h-8" />,
-      title: "BACK-END",
-      description: "Développer des serveurs robustes et des API scalables.",
-      skills: [
-        "PHP 8.4",
-        "Java SE 23",
-        "Python 3.14",
-        "Node.js",
-        "Laravel",
-        "Spring Boot",
-        "Symfony",
-      ],
-    },
-    {
-      icon: <FaDatabase className="w-8 h-8" />,
-      title: "BASES DE DONNÉES",
-      description: "Concevoir et gérer des bases de données performantes.",
-      skills: ["SQL 2023", "HeidiSQL", "SQL Server", "PHP MyAdmin"],
-    },
-    {
-      icon: <FaCloud className="w-8 h-8" />,
-      title: "API & WEB SERVICES",
-      description: "Développer et tester des API REST performantes.",
-      skills: ["API REST", "Postman"],
-    },
-    {
-      icon: <FaTools className="w-8 h-8" />,
-      title: "DEVOPS & CONTENEURISATION",
-      description: "Automatiser les déploiements et gérer les environnements.",
-      skills: ["Docker", "Git", "GitHub", "Kubernetes"],
-    },
-    {
-      icon: <FaTools className="w-8 h-8" />,
-      title: "OUTILS & IDE",
-      description: "Utiliser les meilleurs environnements de développement.",
-      skills: [
-        "VS Code",
-        "Suite JetBrains",
-        "Eclipse IDE",
-        "Spyder",
-        "Git",
-        "GitHub",
-      ],
-    },
+  const skillsData = t("skills.categories", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+    skills: string[];
+  }>;
+
+  const icons = [
+    <FaPalette className="w-8 h-8" />,
+    <FaCode className="w-8 h-8" />,
+    <FaServer className="w-8 h-8" />,
+    <FaDatabase className="w-8 h-8" />,
+    <FaCloud className="w-8 h-8" />,
+    <FaTools className="w-8 h-8" />,
+    <FaTools className="w-8 h-8" />,
   ];
+
+  const skillCategories: SkillCategory[] = skillsData.map((skill, index) => ({
+    icon: icons[index],
+    title: skill.title,
+    description: skill.description,
+    skills: skill.skills,
+  }));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

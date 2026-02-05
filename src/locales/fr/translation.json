@@ -18,7 +18,7 @@
     "heading": "À propos de moi",
     "subheading": "Future Ingénieure Logiciel & Exploratrice de Technologies Globales !",
     "title": "Qui suis-je ?",
-    "text1": "Bonjour, je suis actuellement étudiante alternante à l'EFREI Paris, et en alternance au Ministère de l'Education Nationale ! Passionée de nouvelles technologies et de développement logiciel, apprendre est une notion importante et fondamentales à mes yeux.",
+    "text1": "Bonjour, je suis actuellement étudiante alternante à l'EFREI Paris, et en alternance au Ministère de l'Éducation Nationale ! Passionnée de nouvelles technologies et de développement logiciel, apprendre est une notion importante et fondamentale à mes yeux.",
     "text2": "Mon objectif est de devenir une développeuse logicielle polyvalente, capable de concevoir des solutions numériques innovantes et centrées sur les utilisateurs finaux. Curieuse et motivée, je suis constamment en quête de nouveaux savoirs et d'amélioration continue."
   },
   "skills": {
@@ -26,113 +26,349 @@
     "subheading": "Mes compétences techniques et professionnelles",
     "viewCV": "Visualiser mon CV",
     "downloadCV": "Télécharger mon CV",
-    "categories": {
-      "design": {
+    "categories": [
+      {
         "title": "DESIGN & UI/UX",
-        "description": "Créer des interfaces modernes et ergonomiques."
+        "description": "Créer des interfaces modernes et ergonomiques.",
+        "skills": ["Figma", "Canva", "Adobe XD", "Tailwind CSS", "Bootstrap"]
       },
-      "frontend": {
+      {
         "title": "FRONT-END",
-        "description": "Construire des interfaces web interactives et performantes."
+        "description": "Construire des interfaces web interactives et performantes.",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "JavaScript ES6+",
+          "TypeScript",
+          "Vue.js",
+          "React.js",
+          "Angular",
+          "Swing",
+          "Tailwind CSS"
+        ]
       },
-      "backend": {
+      {
         "title": "BACK-END",
-        "description": "Développer des serveurs robustes et des API scalables."
+        "description": "Développer des serveurs robustes et des API scalables.",
+        "skills": [
+          "PHP 8.4",
+          "Java SE 23",
+          "Python 3.14",
+          "Node.js",
+          "Laravel",
+          "Spring Boot",
+          "Symfony"
+        ]
       },
-      "database": {
+      {
         "title": "BASES DE DONNÉES",
-        "description": "Concevoir et gérer des bases de données performantes."
+        "description": "Concevoir et gérer des bases de données performantes.",
+        "skills": ["SQL 2023", "HeidiSQL", "SQL Server", "PHP MyAdmin"]
       },
-      "api": {
+      {
         "title": "API & WEB SERVICES",
-        "description": "Développer et tester des API REST performantes."
+        "description": "Développer et tester des API REST performantes.",
+        "skills": ["API REST", "Postman"]
       },
-      "devops": {
+      {
         "title": "DEVOPS & CONTENEURISATION",
-        "description": "Automatiser les déploiements et gérer les environnements."
+        "description": "Automatiser les déploiements et gérer les environnements.",
+        "skills": ["Docker", "Git", "GitHub", "Kubernetes"]
       },
-      "tools": {
+      {
         "title": "OUTILS & IDE",
-        "description": "Utiliser les meilleurs environnements de développement."
+        "description": "Utiliser les meilleurs environnements de développement.",
+        "skills": [
+          "VS Code",
+          "Suite JetBrains",
+          "Eclipse IDE",
+          "Spyder",
+          "Git",
+          "GitHub"
+        ]
       }
-    }
+    ]
   },
   "projects": {
-    "heading": "Projets",
-    "subheading": "Découvrez mes réalisations",
-    "seeCode": "Voir le code",
-    "seeDemo": "Voir la démo"
+    "heading": "Mes Projets",
+    "subheading": "Explorer les nouvelles technologies grâce à des projets pratiques",
+    "seeCode": "Voir le Code",
+    "seeDemo": "Voir la Démo",
+    "time": "Temps : ",
+    "list": [
+      {
+        "title": "Application ToDo List",
+        "objectif": "Les bases de JavaScript",
+        "description": "Application de gestion de tâches. Interagissez avec le chien, il y a des surprises ! (inspiration du travail de Toby Fox)",
+        "technologies": ["Html5", "CSS3", "JavaScript ES6+"],
+        "time": "1h",
+        "image": "/media/todo.png",
+        "githubLink": "https://github.com/perviin/ToDoList-Js",
+        "liveLink": "https://perviin-todolist.netlify.app/"
+      },
+      {
+        "title": "Application Météo",
+        "objectif": "Utilisation d'API REST",
+        "description": "Application météo",
+        "technologies": ["React", "Vite", "API REST"],
+        "time": "3h",
+        "image": "/media/weather.png",
+        "githubLink": "https://github.com/perviin/weather-app",
+        "liveLink": "https://perviin-weather.netlify.app/"
+      },
+      {
+        "title": "Îles en 3D",
+        "objectif": "Utilisation de three.js pour permettre le rendu 3D sur des pages web",
+        "description": "Rendu 3D d'îles réalisé en Blender",
+        "technologies": ["Three.js", "Blender"],
+        "time": "1h",
+        "image": "/media/iles.png",
+        "githubLink": "https://github.com/perviin/Iles-three.js",
+        "liveLink": "https://perviin-iles.netlify.app/"
+      },
+      {
+        "title": "Dinosaure Chrome",
+        "objectif": "Première utilisation de Java Swing",
+        "description": "Le jeu du dinosaure de Chrome",
+        "technologies": ["Java", "Swing"],
+        "time": "1h",
+        "image": "/media/dino.png",
+        "githubLink": "https://github.com/perviin/ChromDino-JAVA"
+      },
+      {
+        "title": "Programme de Banque",
+        "objectif": "Apprendre les bases de Python dans un cadre professionnel",
+        "description": "Programme de gestion de finances personnelles en Python",
+        "technologies": ["Python"],
+        "time": "30 min",
+        "image": "/media/banque.png",
+        "githubLink": "https://github.com/perviin/ProgrammeBanque_Python"
+      },
+      {
+        "title": "Whack-A-Mole",
+        "objectif": "Approfondir les connaissances en Java Swing",
+        "description": "Jeu où il faut taper sur des taupes pour gagner des points",
+        "technologies": ["Java", "Swing"],
+        "time": "1h",
+        "image": "/media/whacamole.png",
+        "githubLink": "https://github.com/perviin/WhacAMole-JAVA"
+      },
+      {
+        "title": "Pokédex en JS",
+        "objectif": "Création d'un pokédex basé sur le jeu Pokémon Rouge, Bleu et Jaune",
+        "description": "Pokédex virtuel",
+        "technologies": ["JavaScript ES6+"],
+        "time": "1h30",
+        "image": "/media/pokedex.png",
+        "githubLink": "https://github.com/perviin/Pokedex-JS",
+        "liveLink": "https://perviin-pokedex.netlify.app/"
+      },
+      {
+        "title": "Pokéfight",
+        "objectif": "Développement d'un jeu de simulation de combat Pokémon basé sur le modèle DS",
+        "description": "Simulateur simple de combat Pokémon",
+        "technologies": ["React", "TypeScript"],
+        "time": "2 jours",
+        "image": "/media/pokefight.png",
+        "githubLink": "https://github.com/perviin/PokeFight",
+        "liveLink": "https://perviin-pokefight.netlify.app/"
+      },
+      {
+        "title": "Evently",
+        "objectif": "Utilisation de Laravel",
+        "description": "Plateforme de création et de répertorisation d'événements à destination d'un public cible",
+        "technologies": ["Laravel", "Node.js"],
+        "time": "En cours",
+        "image": "/media/evently.png",
+        "githubLink": "https://github.com/perviin/Gestion-events-LARAVEL"
+      },
+      {
+        "title": "Système de Gestion d'Étudiants",
+        "objectif": "Créer une application fullstack de gestion d'étudiants",
+        "description": "Gestion des étudiants en ligne",
+        "technologies": [
+          "JavaScript ES6+",
+          "Node.js",
+          "Java",
+          "Spring Boot",
+          "C#",
+          "Docker",
+          "Kubernetes",
+          "MySQL",
+          "TypeScript"
+        ],
+        "time": "3 jours",
+        "image": "/media/student-management.png",
+        "githubLink": "https://github.com/perviin/student-managment"
+      },
+      {
+        "title": "Gestionnaire de Dépenses",
+        "objectif": "Créer une application Python complète de gestion de dépenses",
+        "description": "Gestion des dépenses personnelles",
+        "technologies": ["Python", "NumPy", "Pandas"],
+        "time": "2 jours",
+        "image": "/media/expense.png",
+        "githubLink": "https://github.com/perviin/expense-tracker"
+      },
+      {
+        "title": "Application Gestion d'Étudiant Docker",
+        "objectif": "Créer une application complète de gestion d'étudiants",
+        "description": "Gestion des étudiants avec Docker",
+        "technologies": ["Python", "NumPy", "Pandas", "Docker"],
+        "time": "2 jours",
+        "image": "/media/docker.png",
+        "githubLink": "https://github.com/perviin/examen-docker"
+      }
+    ]
   },
   "experience": {
-    "heading": "Expériences professionnelles",
-    "subheading": "Mes expériences m'ayant forgé en tant que développeuse",
-    "technologiesUsed": "Technologies utilisées:",
-    "seeReport": "Voir le rapport"
+    "heading": "Expérience Professionnelle",
+    "subheading": "Les expériences qui m'ont façonnée en tant que développeuse",
+    "technologiesUsed": "Technologies :",
+    "seeReport": "Voir le Rapport",
+    "list": [
+      {
+        "entreprise": "Ministère de l'Éducation Nationale",
+        "periode": "Septembre 2025 - Présent",
+        "description": "Développement et amélioration d'une application interne visant à gérer les contrats numériques des chercheurs au sein du ministère.",
+        "technologies": ["PHP Symfony"],
+        "rapport": null
+      },
+      {
+        "entreprise": "JANIN Consulting",
+        "periode": "Janvier - Mars 2024",
+        "description": "Stage de deuxième année en tant que développeuse fullstack.",
+        "technologies": ["Angular", "Java Spring Boot"],
+        "rapport": "/rapports/stage2.pdf"
+      },
+      {
+        "entreprise": "DesCodeuses",
+        "periode": "Juin - Juillet 2023",
+        "description": "Stage de première année en tant que développeuse web et technicienne informatique",
+        "technologies": ["HTML5", "CSS3", "JavaScript ES6+"],
+        "rapport": "/rapports/stage1.pdf"
+      }
+    ]
   },
   "certifications": {
     "heading": "Certifications",
-    "subheading": "Mes certifications et diplômes",
-    "viewCertification": "Visualiser la certification"
+    "subheading": "Mes certifications professionnelles",
+    "viewCertification": "Voir le Certificat",
+    "list": [
+      {
+        "titre": "Responsive Web Design",
+        "organisme": "freeCodeCamp",
+        "date": "2023",
+        "description": "La certification Responsive Web Design de FreeCodeCamp forme aux bases du HTML5, du CSS3 et aux techniques de design adaptatif, permettant de créer des sites web modernes et optimisés pour tous types d'écrans.",
+        "image": "https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg",
+        "certificatLien": "/certifs/responsiveWebDesign.PNG"
+      },
+      {
+        "titre": "MOOC",
+        "organisme": "ANSSI - SecNum Académie",
+        "date": "2023",
+        "description": "Le MOOC de l'ANSSI permet de sensibiliser à la cybersécurité et de fournir les clés pour protéger ses données et systèmes contre les cyberattaques.",
+        "image": "https://upload.wikimedia.org/wikipedia/fr/3/31/Anssi.png",
+        "certificatLien": "/certifs/mooc-pervin.PNG"
+      },
+      {
+        "titre": "English for IT 1",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "La certification English for IT 1 de Cisco améliore les compétences en anglais pour mieux comprendre le vocabulaire et les termes techniques de l'informatique.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/english_for_it.pdf"
+      },
+      {
+        "titre": "Intro. à la Cyber",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "La certification Introduction à la cybersécurité de Cisco permet une introduction en douceur des différents concepts liés à la cybersécurité ainsi qu'aux enjeux de celle-ci.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/pervinEREN_IntroductionCyber.PNG"
+      },
+      {
+        "titre": "Découverte de Linux",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "La certification Découverte de Linux de Cisco permet un apprentissage des bases du système d'exploitation Linux, permettant une utilisation complète de cet OS.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/pervinEren_decouverteLinux.PNG"
+      },
+      {
+        "titre": "Networking Essentials",
+        "organisme": "Cisco",
+        "date": "2024",
+        "description": "La certification Networking Essentials de Cisco permet de comprendre les bases du Networking en assurant que ces bases puissent être utilisées dans un contexte professionnel.",
+        "image": "https://translatorswithoutborders.org/wp-content/uploads/2021/12/Cisco-logo.png",
+        "certificatLien": "/certifs/pervinEren_networkingEssentials.PNG"
+      },
+      {
+        "titre": "JavaScript Algorithms and Data Structures",
+        "organisme": "freeCodeCamp",
+        "date": "2025",
+        "description": "La certification JavaScript Algorithms and Data Structures de freeCodeCamp permet d'assimiler les bases de JavaScript tout en les approfondissant dans la même certification.",
+        "image": "https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg",
+        "certificatLien": null
+      }
+    ]
+  },
+  "about": {
+    "heading": "À Propos - BTS SIO",
+    "btsDescription": "Je suis actuellement diplômée d'un BTS en Organisation des Solutions Informatiques",
+    "slam": {
+      "title": "SLAM (Solutions Logicielles et Applications Métier)",
+      "description": "Solutions Logicielles et Applications Métier",
+      "skills": [
+        "Développement Web",
+        "Développement Mobile",
+        "Conception de Base de Données",
+        "Développement d'API",
+        "Architecture Logicielle"
+      ]
+    },
+    "sisr": {
+      "title": "SISR (Solutions d'Infrastructure, Serveurs et Réseaux)",
+      "description": "Solutions d'Infrastructure, Serveurs et Réseaux",
+      "skills": [
+        "Administration Système",
+        "Gestion Réseau",
+        "Conception d'Infrastructure",
+        "Solutions Cloud",
+        "Cybersécurité"
+      ]
+    }
   },
   "veille": {
     "heading": "Veille Informatique",
-    "introTitle": "Veille Informatique",
-    "subtitle": "L'IA dans la vie quotidienne: bonus ou malus ?",
-    "definition": "Qu'est-ce qu'une \"Veille Informatique\" ?",
-    "definitionText": "Une veille informatique consiste à surveiller de manière continue les évolutions technologiques, les tendances du marché, et les innovations dans le domaine de l'informatique. Elle permet de se tenir informé des dernières avancées, de comprendre les enjeux actuels et futurs, et d'anticiper les évolutions qui pourraient impacter notre travail, nos projets ou la société en général. La veille est un outil indispensable pour tout professionnel du secteur technologique, car elle aide à prendre des décisions éclairées et à s'adapter rapidement aux changements.",
+    "subtitle": "Suivi des dernières tendances et innovations technologiques",
+    "definition": "Qu'est-ce qu'une Veille Technologique ?",
+    "definitionText": "Une veille informatique consiste à surveiller de manière continue les évolutions technologiques, les tendances du marché, et les innovations dans le domaine de l'informatique. Elle permet de se tenir informé des dernières avancées, de comprendre les enjeux actuels et futurs, et d'anticiper les évolutions qui pourraient impacter notre travail, nos projets ou la société en général.",
     "whyTheme": "Pourquoi ce thème si large ?",
-    "whyThemeText": "L'intelligence artificielle est aujourd'hui au cœur de nombreuses évolutions technologiques et sociales. Dans un monde où l'IA devient presque indispensable pour certaines personnes, une question se pose : cette dépendance pourrait-elle nuire à l'autonomie et à notre capacité à réfléchir par nous-mêmes ? Les avantages sont nombreux, mais à quel prix ? Que se passerait-il si l'IA cessait d'exister ou devenait obsolète ? Cette réflexion m'intéresse particulièrement, car elle interroge l'avenir et la manière dont nous intégrons les technologies dans notre vie, notamment dans la quête de sens et d'équilibre dans un monde toujours plus automatisé.",
+    "whyThemeText": "L'intelligence artificielle est aujourd'hui au cœur de nombreuses évolutions technologiques et sociales. Dans un monde où l'IA devient presque indispensable pour certaines personnes, une question se pose : cette dépendance pourrait-elle nuire à l'autonomie et à notre capacité à réfléchir par nous-mêmes ?",
     "latestNews": "Dernières Actualités",
     "objectives": "Objectifs",
     "objective1": "Suivre les innovations en IA",
     "objective2": "Analyser l'impact sur les métiers existants",
-    "objective3": "Identifier les nouvelles opportunités créer grâce à l'IA",
+    "objective3": "Identifier les nouvelles opportunités créées grâce à l'IA",
     "sources": "Sources",
     "source1": "Utilisation d'API pour automatiser les articles",
     "source2": "Articles provenant de Newsletter",
-    "source3": "Rapports régulier et constant",
-    "errorLoading": "Erreur lors du chargement des articles"
+    "source3": "Suivi régulier et constant",
+    "error": "Impossible de charger la veille informatique"
   },
   "contact": {
-    "heading": "Contact",
-    "subheading": "N'hésitez pas à me contacter",
+    "heading": "Me Contacter",
+    "subheading": "N'hésitez pas à me contacter pour toute demande",
     "name": "Nom",
     "email": "Email",
     "subject": "Sujet",
     "message": "Message",
-    "send": "Envoyer",
+    "send": "Envoyer le Message",
     "github": "GitHub",
     "linkedin": "LinkedIn"
   },
   "footer": {
     "copyright": "Tous droits réservés."
-  },
-  "about": {
-    "title": "BTS SIO",
-    "subtitle": "Brevet de Technicien Supérieur Services Informatiques aux Organisations",
-    "description": "Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégrer directement le marché du travail ou continuer des études, dans le domaine de l'informatique.",
-    "specialties": "Le BTS SIO propose deux spécialités :",
-    "slam": {
-      "title": "Option SLAM",
-      "subtitle": "Solutions Logicielles et Applications Métiers",
-      "skills": [
-        "Développement d'applications",
-        "Programmation orientée objet",
-        "Développement web et mobile",
-        "Bases de données",
-        "Cybersécurité"
-      ]
-    },
-    "sisr": {
-      "title": "Option SISR",
-      "subtitle": "Solutions d'Infrastructure, Systèmes et Réseaux",
-      "skills": [
-        "Administration systèmes",
-        "Réseaux informatiques",
-        "Virtualisation",
-        "Services d'infrastructure",
-        "Sécurité des systèmes"
-      ]
-    }
   }
 }
