@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaSun, FaMoon } from "react-icons/fa";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -141,6 +142,7 @@ export default function Navbar() {
                 <FaMoon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
               )}
             </motion.button>
+            <LanguageToggle />
           </div>
 
           <div className="md:hidden flex items-center">
@@ -199,6 +201,21 @@ export default function Navbar() {
               {link.text}
             </a>
           ))}
+          <div className="flex items-center justify-end gap-2 px-3 py-2 border-t border-gray-200 dark:border-gray-700 mt-2 pt-4">
+            <motion.button
+              onClick={toggleTheme}
+              className="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {isDark ? (
+                <FaSun className="w-6 h-6 text-yellow-500" />
+              ) : (
+                <FaMoon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+              )}
+            </motion.button>
+            <LanguageToggle />
+          </div>
         </div>
       </div>
     </nav>
