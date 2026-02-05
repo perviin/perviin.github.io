@@ -1,7 +1,9 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <motion.div
@@ -11,20 +13,30 @@ export default function Contact() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact</h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300">N'hésitez pas à me contacter</p>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {t("contact.heading")}
+        </h2>
+        <p className="text-xl text-gray-600 dark:text-gray-300">
+          {t("contact.subheading")}
+        </p>
       </motion.div>
 
       <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-            <form className="space-y-6" 
-                  action="https://formspree.io/f/xrbejzjn"
-                  method="POST"
+            <form
+              className="space-y-6"
+              action="https://formspree.io/f/xrbejzjn"
+              method="POST"
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nom</label>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
+                    {t("contact.name")}
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -34,7 +46,12 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
+                    {t("contact.email")}
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -45,7 +62,12 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Sujet</label>
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
+                  {t("contact.subject")}
+                </label>
                 <input
                   type="text"
                   id="subject"
@@ -55,7 +77,12 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
+                  {t("contact.message")}
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -68,7 +95,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-600"
               >
-                Envoyer
+                {t("contact.send")}
               </button>
             </form>
           </div>
@@ -82,8 +109,15 @@ export default function Contact() {
                   <FaGithub className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium text-gray-900 dark:text-white">GitHub</h4>
-                  <a href="https://github.com/perviin" target="_blank" rel="noopener noreferrer" className="mt-1 text-indigo-600 dark:text-indigo-400 hover:underline">
+                  <h4 className="text-lg font-medium text-gray-900 dark:text-white">
+                    {t("contact.github")}
+                  </h4>
+                  <a
+                    href="https://github.com/perviin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
                     github.com/perviin
                   </a>
                 </div>
@@ -93,8 +127,15 @@ export default function Contact() {
                   <FaLinkedin className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium text-gray-900 dark:text-white">LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/pervin-e-557575256/" target="_blank" rel="noopener noreferrer" className="mt-1 text-indigo-600 dark:text-indigo-400 hover:underline">
+                  <h4 className="text-lg font-medium text-gray-900 dark:text-white">
+                    {t("contact.linkedin")}
+                  </h4>
+                  <a
+                    href="https://www.linkedin.com/in/pervin-e-557575256/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
                     linkedin.com/in/pervineren
                   </a>
                 </div>

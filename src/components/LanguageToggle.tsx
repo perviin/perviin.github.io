@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function LanguageToggle() {
+  const { i18n } = useTranslation();
   const [language, setLanguage] = useState<"en" | "fr">("fr");
 
   useEffect(() => {
@@ -10,11 +12,13 @@ export default function LanguageToggle() {
       (localStorage.getItem("language") as "en" | "fr") ||
       (userLang === "en" ? "en" : "fr");
     setLanguage(savedLang);
-  }, []);
+    i18n.changeLanguage(savedLang);
+  }, [i18n]);
 
   const handleLanguageChange = () => {
     const newLang = language === "en" ? "fr" : "en";
     setLanguage(newLang);
+    i18n.changeLanguage(newLang);
     localStorage.setItem("language", newLang);
   };
 

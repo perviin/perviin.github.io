@@ -1,23 +1,30 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { FaRss, FaSpinner, FaCalendar, FaExternalLinkAlt } from 'react-icons/fa';
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import {
+  FaRss,
+  FaSpinner,
+  FaCalendar,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const apiKey = import.meta.env.VITE_NEWSDATA_API_KEY;
 
 interface Article {
   title: string;
   description: string;
-  link: string; 
+  link: string;
   pubDate: string;
   source: string;
 }
 
 export default function VeilleInfo() {
+  const { t } = useTranslation();
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  
+
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage] = useState(3);
@@ -26,20 +33,18 @@ export default function VeilleInfo() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get(
-          'https://newsdata.io/api/1/news', {
-            params: {
-              q: 'IA',
-              language: 'fr',
-              apiKey: apiKey,
-            }
-          }
-        );
+        const response = await axios.get("https://newsdata.io/api/1/news", {
+          params: {
+            q: "IA",
+            language: "fr",
+            apiKey: apiKey,
+          },
+        });
         // Store all fetched articles
         setAllArticles(response.data.results || []);
         setLoading(false);
       } catch (err) {
-        setError('Erreur lors du chargement des articles');
+        setError("Erreur lors du chargement des articles");
         setLoading(false);
       }
     };
@@ -55,10 +60,10 @@ export default function VeilleInfo() {
   }, [currentPage, allArticles, articlesPerPage]);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('fr-FR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+    return new Date(dateString).toLocaleDateString("fr-FR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
   };
 
@@ -80,29 +85,29 @@ export default function VeilleInfo() {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { 
-        staggerChildren: 0.1 
-      }
-    }
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const articleVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.4
-      }
-    }
+      transition: {
+        duration: 0.4,
+      },
+    },
   };
 
   const pageButtonVariants = {
     initial: { scale: 1 },
     hover: { scale: 1.1 },
-    tap: { scale: 0.95 }
+    tap: { scale: 0.95 },
   };
 
   return (
@@ -115,16 +120,19 @@ export default function VeilleInfo() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Veille Informatique</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {t("veille.heading")}
+          </h2>
           <div className="max-w-8xl mx-auto">
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              L'IA dans la vie quotidienne: bonus ou malus ?
+              {t("veille.subtitle")}
             </p>
             <p className="text-md text-gray-600 dark:text-gray-400 mt-2">
-              <strong>Qu'est-ce qu'une "Veille Informatique" ?</strong> Une veille informatique consiste à surveiller de manière continue les évolutions technologiques, les tendances du marché, et les innovations dans le domaine de l'informatique. Elle permet de se tenir informé des dernières avancées, de comprendre les enjeux actuels et futurs, et d'anticiper les évolutions qui pourraient impacter notre travail, nos projets ou la société en général. La veille est un outil indispensable pour tout professionnel du secteur technologique, car elle aide à prendre des décisions éclairées et à s'adapter rapidement aux changements.
+              <strong>{t("veille.definition")}</strong>{" "}
+              {t("veille.definitionText")}
             </p>
             <p className="text-md text-gray-600 dark:text-gray-400 mt-2">
-              <strong>Pourquoi ce thème si large ?</strong>  L'intelligence artificielle est aujourd'hui au cœur de nombreuses évolutions technologiques et sociales. Dans un monde où l'IA devient presque indispensable pour certaines personnes, une question se pose : cette dépendance pourrait-elle nuire à l'autonomie et à notre capacité à réfléchir par nous-mêmes ? Les avantages sont nombreux, mais à quel prix ? Que se passerait-il si l'IA cessait d'exister ou devenait obsolète ? Cette réflexion m'intéresse particulièrement, car elle interroge l'avenir et la manière dont nous intégrons les technologies dans notre vie, notamment dans la quête de sens et d'équilibre dans un monde toujours plus automatisé.
+              <strong>{t("veille.whyTheme")}</strong> {t("veille.whyThemeText")}
             </p>
           </div>
         </motion.div>
@@ -138,20 +146,22 @@ export default function VeilleInfo() {
             className="lg:col-span-2 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8"
           >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Dernières Actualités
+              {t("veille.latestNews")}
             </h3>
-            
+
             {loading ? (
               <div className="flex justify-center items-center h-64">
                 <FaSpinner className="animate-spin text-4xl text-indigo-600 dark:text-indigo-400" />
               </div>
             ) : error ? (
               <div className="text-red-500 dark:text-red-400 text-center py-8">
-                {error}
+                {t("veille.errorLoading")}
               </div>
             ) : (
               <>
-                <div className="min-h-[500px]"> {/* Fixed height container to prevent layout shifts */}
+                <div className="min-h-[500px]">
+                  {" "}
+                  {/* Fixed height container to prevent layout shifts */}
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentPage}
@@ -199,10 +209,10 @@ export default function VeilleInfo() {
                     </motion.div>
                   </AnimatePresence>
                 </div>
-                
+
                 {/* Pagination - only show if we have more than one page */}
                 {totalPages > 1 && (
-                  <motion.nav 
+                  <motion.nav
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.4 }}
@@ -216,20 +226,22 @@ export default function VeilleInfo() {
                           initial="initial"
                           whileHover="hover"
                           whileTap="tap"
-                          onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+                          onClick={() =>
+                            currentPage > 1 && handlePageChange(currentPage - 1)
+                          }
                           disabled={currentPage === 1}
                           className={`px-3 py-1 rounded-md ${
                             currentPage === 1
-                              ? 'bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400'
-                              : 'bg-gray-200 text-gray-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                              ? "bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400"
+                              : "bg-gray-200 text-gray-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                           }`}
                         >
                           &laquo;
                         </motion.button>
                       </li>
-                      
+
                       {/* Page numbers */}
-                      {pageNumbers.map(number => (
+                      {pageNumbers.map((number) => (
                         <li key={number}>
                           <motion.button
                             variants={pageButtonVariants}
@@ -239,15 +251,15 @@ export default function VeilleInfo() {
                             onClick={() => handlePageChange(number)}
                             className={`px-3 py-1 rounded-md ${
                               currentPage === number
-                                ? 'bg-indigo-600 text-white dark:bg-indigo-500'
-                                : 'bg-gray-200 text-gray-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                                ? "bg-indigo-600 text-white dark:bg-indigo-500"
+                                : "bg-gray-200 text-gray-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                             }`}
                           >
                             {number}
                           </motion.button>
                         </li>
                       ))}
-                      
+
                       {/* Next button */}
                       <li>
                         <motion.button
@@ -255,12 +267,15 @@ export default function VeilleInfo() {
                           initial="initial"
                           whileHover="hover"
                           whileTap="tap"
-                          onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+                          onClick={() =>
+                            currentPage < totalPages &&
+                            handlePageChange(currentPage + 1)
+                          }
                           disabled={currentPage === totalPages}
                           className={`px-3 py-1 rounded-md ${
                             currentPage === totalPages
-                              ? 'bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400'
-                              : 'bg-gray-200 text-gray-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                              ? "bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400"
+                              : "bg-gray-200 text-gray-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                           }`}
                         >
                           &raquo;
@@ -282,40 +297,40 @@ export default function VeilleInfo() {
           >
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                Objectifs
+                {t("veille.objectives")}
               </h3>
               <ul className="space-y-4 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-3 bg-indigo-500 rounded-full"></span>
-                  <span>Suivre les innovations en IA</span>
+                  <span>{t("veille.objective1")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-3 bg-indigo-500 rounded-full"></span>
-                  <span>Analyser l'impact sur les métiers existants</span>
+                  <span>{t("veille.objective2")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-3 bg-indigo-500 rounded-full"></span>
-                  <span>Identifier les nouvelles opportunités créer grâce à l'IA</span>
+                  <span>{t("veille.objective3")}</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                Sources
+                {t("veille.sources")}
               </h3>
               <div className="space-y-3 text-gray-600 dark:text-gray-300">
                 <div className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                   <FaRss className="text-indigo-500 mr-3" />
-                  <span>Utilisation d'API pour automatiser les articles</span>
+                  <span>{t("veille.source1")}</span>
                 </div>
                 <div className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                   <FaRss className="text-indigo-500 mr-3" />
-                  <span>Articles provenant de Newsletter</span>
+                  <span>{t("veille.source2")}</span>
                 </div>
                 <div className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                   <FaRss className="text-indigo-500 mr-3" />
-                  <span>Rapports régulier et constant</span>
+                  <span>{t("veille.source3")}</span>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 interface Project {
   title: string;
@@ -13,6 +14,7 @@ interface Project {
 }
 
 export default function Projects() {
+  const { t } = useTranslation();
   const Projects: Project[] = [
     {
       title: "ToDo List App",
@@ -212,7 +214,7 @@ export default function Projects() {
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"
                     >
                       <FaGithub className="mr-2" />
-                      Voir le code
+                      {t("projects.seeCode")}
                     </a>
                   )}
                   {project.liveLink && (
@@ -223,7 +225,7 @@ export default function Projects() {
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"
                     >
                       <FaExternalLinkAlt className="mr-2" />
-                      Voir la démo
+                      {t("projects.seeDemo")}
                     </a>
                   )}
                 </div>
@@ -245,10 +247,10 @@ export default function Projects() {
         className="text-center mb-16"
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Projets
+          {t("projects.heading")}
         </h2>
         <p className="text-xl text-gray-600 dark:text-gray-300">
-          Découvrez mes réalisations
+          {t("projects.subheading")}
         </p>
       </motion.div>
 

@@ -7,6 +7,7 @@ import {
   FaServer,
   FaCloud,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 interface SkillCategory {
   icon: JSX.Element;
@@ -16,6 +17,7 @@ interface SkillCategory {
 }
 
 export default function Skills() {
+  const { t } = useTranslation();
   const skillCategories: SkillCategory[] = [
     {
       icon: <FaPalette className="w-8 h-8" />,
@@ -97,10 +99,10 @@ export default function Skills() {
         className="text-center mb-12"
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Mes Compétences
+          {t("skills.heading")}
         </h2>
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-          Mes compétences techniques et professionnelles
+          {t("skills.subheading")}
         </p>
 
         <div className="flex justify-center gap-4">
@@ -110,14 +112,14 @@ export default function Skills() {
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"
           >
-            Visualiser mon CV
+            {t("skills.viewCV")}
           </a>
           <a
             href="/cv/cv_pervin_portfolio.pdf"
             download
             className="inline-flex items-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"
           >
-            Télécharger mon CV
+            {t("skills.downloadCV")}
           </a>
         </div>
       </motion.div>

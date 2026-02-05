@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);
   }, []);
@@ -129,7 +131,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Pervin Eren
+            {t("hero.name")}
           </motion.h1>
 
           <motion.p
@@ -138,7 +140,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Future Ingénieure Logiciel & Passionnée par les Défis Tech
+            {t("hero.title")}
           </motion.p>
         </motion.div>
       </div>

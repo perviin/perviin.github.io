@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -13,7 +15,9 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center text-white"
         >
-          <p>&copy; {currentYear} Pervin. Tous droits réservés.</p>
+          <p>
+            &copy; {currentYear} Pervin. {t("footer.copyright")}
+          </p>
         </motion.div>
       </div>
     </footer>

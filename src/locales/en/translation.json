@@ -1,0 +1,138 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "certifications": "Certifications",
+    "veille": "Tech News",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Pervin Eren",
+    "title": "Future Software Engineer & Tech Challenge Explorer",
+    "subtitle": "Welcome to my digital journey"
+  },
+  "me": {
+    "heading": "About Me",
+    "subheading": "Future Software Engineer & Technology Global Explorer!",
+    "title": "Who am I?",
+    "text1": "Hello, I am currently an alternating student at EFREI Paris, and on an internship at the National Ministry of Education! Passionate about new technologies and software development, learning is an important and fundamental notion in my eyes.",
+    "text2": "My goal is to become a versatile software developer, capable of designing innovative digital solutions centered on end users. Curious and motivated, I am constantly seeking new knowledge and continuous improvement."
+  },
+  "skills": {
+    "heading": "My Skills",
+    "subheading": "My technical and professional skills",
+    "viewCV": "View my CV",
+    "downloadCV": "Download my CV",
+    "categories": {
+      "design": {
+        "title": "DESIGN & UI/UX",
+        "description": "Create modern and user-friendly interfaces."
+      },
+      "frontend": {
+        "title": "FRONT-END",
+        "description": "Build interactive and high-performance web interfaces."
+      },
+      "backend": {
+        "title": "BACK-END",
+        "description": "Develop robust servers and scalable APIs."
+      },
+      "database": {
+        "title": "DATABASES",
+        "description": "Design and manage high-performance databases."
+      },
+      "api": {
+        "title": "API & WEB SERVICES",
+        "description": "Develop and test high-performance REST APIs."
+      },
+      "devops": {
+        "title": "DEVOPS & CONTAINERIZATION",
+        "description": "Automate deployments and manage environments."
+      },
+      "tools": {
+        "title": "TOOLS & IDE",
+        "description": "Use the best development environments."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Projects",
+    "subheading": "Discover my achievements",
+    "seeCode": "See code",
+    "seeDemo": "See demo"
+  },
+  "experience": {
+    "heading": "Professional Experience",
+    "subheading": "Experiences that have shaped me as a developer",
+    "technologiesUsed": "Technologies used:",
+    "seeReport": "See report"
+  },
+  "certifications": {
+    "heading": "Certifications",
+    "subheading": "My certifications and diplomas",
+    "viewCertification": "View certification"
+  },
+  "veille": {
+    "heading": "Tech Monitoring",
+    "introTitle": "Tech Monitoring",
+    "subtitle": "AI in daily life: bonus or downside?",
+    "definition": "What is \"Tech Monitoring\"?",
+    "definitionText": "Tech monitoring consists of continuously tracking technological developments, market trends, and innovations in the IT field. It allows you to stay informed about the latest advances, understand current and future challenges, and anticipate changes that could impact our work, projects or society in general. Monitoring is an essential tool for any technology professional, as it helps make informed decisions and adapt quickly to changes.",
+    "whyTheme": "Why this broad topic?",
+    "whyThemeText": "Artificial intelligence is now at the heart of many technological and social developments. In a world where AI is becoming almost indispensable for some people, a question arises: could this dependence harm our autonomy and our ability to think for ourselves? The advantages are numerous, but at what cost? What if AI ceased to exist or became obsolete? This reflection interests me particularly, because it questions the future and the way we integrate technologies into our lives, especially in the quest for meaning and balance in an increasingly automated world.",
+    "latestNews": "Latest News",
+    "objectives": "Objectives",
+    "objective1": "Follow AI innovations",
+    "objective2": "Analyze impact on existing jobs",
+    "objective3": "Identify new opportunities created thanks to AI",
+    "sources": "Sources",
+    "source1": "Using API to automate articles",
+    "source2": "Articles from Newsletter",
+    "source3": "Regular and constant reports",
+    "errorLoading": "Error loading articles"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subheading": "Feel free to contact me",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "about": {
+    "title": "BTS SIO",
+    "subtitle": "Brevet de Technicien Supérieur Services Informatiques aux Organisations",
+    "description": "The Brevet de Technicien Supérieur in Services Informatiques aux Organisations (BTS SIO) is designed for those who wish to train in two years for careers as a network administrator or developer. To then enter the job market directly or continue studies in the IT field.",
+    "specialties": "BTS SIO offers two specialties:",
+    "slam": {
+      "title": "Option SLAM",
+      "subtitle": "Software Solutions and Business Applications",
+      "skills": [
+        "Application Development",
+        "Object-oriented Programming",
+        "Web and Mobile Development",
+        "Databases",
+        "Cybersecurity"
+      ]
+    },
+    "sisr": {
+      "title": "Option SISR",
+      "subtitle": "Infrastructure Solutions, Systems and Networks",
+      "skills": [
+        "System Administration",
+        "Computer Networks",
+        "Virtualization",
+        "Infrastructure Services",
+        "System Security"
+      ]
+    }
+  }
+}

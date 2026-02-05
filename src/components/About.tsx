@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -10,10 +12,10 @@ export default function About() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">BTS SIO</h2>
-        <p className="text-1xl text-gray-600 dark:text-gray-300">Brevet de Technicien Supérieur Services Informatiques aux Organisations</p>
-        <p className="text-m py-2 text-dark-600 dark:text-gray-300">Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégrer directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
-        <p className="text-xl py-2 text-dark-600 dark:text-gray-300">Le BTS SIO propose deux spécialités :</p>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t('about.title')}</h2>
+        <p className="text-1xl text-gray-600 dark:text-gray-300">{t('about.subtitle')}</p>
+        <p className="text-m py-2 text-dark-600 dark:text-gray-300">{t('about.description')}</p>
+        <p className="text-xl py-2 text-dark-600 dark:text-gray-300">{t('about.specialties')}</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -24,16 +26,14 @@ export default function About() {
           viewport={{ once: true }}
           className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
         >
-          <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Option SLAM</h3>
+          <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{t('about.slam.title')}</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
-            Solutions Logicielles et Applications Métiers
+            {t('about.slam.subtitle')}
           </p>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-            <li>Développement d'applications</li>
-            <li>Programmation orientée objet</li>
-            <li>Développement web et mobile</li>
-            <li>Bases de données</li>
-            <li>Cybersécurité</li>
+            {t('about.slam.skills', { returnObjects: true }).map((skill: string, idx: number) => (
+              <li key={idx}>{skill}</li>
+            ))}
           </ul>
         </motion.div>
 
@@ -44,10 +44,20 @@ export default function About() {
           viewport={{ once: true }}
           className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
         >
-          <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Option SISR</h3>
+          <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{t('about.sisr.title')}</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
-            Solutions d'Infrastructure, Systèmes et Réseaux
+            {t('about.sisr.subtitle')}
           </p>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+            {t('about.sisr.skills', { returnObjects: true }).map((skill: string, idx: number) => (
+              <li key={idx}>{skill}</li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
             <li>Administration systèmes</li>
             <li>Réseaux informatiques</li>

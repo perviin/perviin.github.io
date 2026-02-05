@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaFilePdf } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 interface Experience {
   entreprise: string;
@@ -10,6 +11,7 @@ interface Experience {
 }
 
 export default function Experience() {
+  const { t } = useTranslation();
   const stages: Experience[] = [
     {
       entreprise: "Ministère de l'Éducation Nationale",
@@ -46,10 +48,10 @@ export default function Experience() {
         className="text-center mb-12"
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Expériences professionnelles
+          {t("experience.heading")}
         </h2>
         <p className="text-xl text-gray-600 dark:text-gray-300">
-          Mes expériences m'ayant forgé en tant que développeuse
+          {t("experience.subheading")}
         </p>
       </motion.div>
 
@@ -83,7 +85,7 @@ export default function Experience() {
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      Technologies utilisées:
+                      {t("experience.technologiesUsed")}
                     </p>
                     {stage.technologies.map((tech, techIndex) => (
                       <span
@@ -104,7 +106,7 @@ export default function Experience() {
                       whileTap={{ scale: 0.95 }}
                     >
                       <FaFilePdf className="mr-2" />
-                      Voir le rapport
+                      {t("experience.seeReport")}
                     </motion.a>
                   ) : null}
                 </div>

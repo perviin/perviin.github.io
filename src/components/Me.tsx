@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { FaUser } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <motion.div
@@ -41,21 +43,12 @@ export default function About() {
         >
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700">
             <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-              Qui suis-je ?
+              {t("me.title")}
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Bonjour, je suis actuellement étudiante alternante à l'EFREI
-              Paris, et en alternance au Ministère de l'Education Nationale !
-              Passionée de nouvelles technologies et de développement logiciel,
-              apprendre est une notion importante et fondamentales à mes yeux.
+              {t("me.text1")}
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Mon objectif est de devenir une développeuse logicielle
-              polyvalente, capable de concevoir des solutions numériques
-              innovantes et centrées sur les utilisateurs finaux. Curieuse et
-              motivée, je suis constamment en quête de nouveaux savoirs et
-              d'amélioration continue.
-            </p>
+            <p className="text-gray-700 dark:text-gray-300">{t("me.text2")}</p>
           </div>
         </motion.div>
       </div>

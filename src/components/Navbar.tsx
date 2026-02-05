@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
@@ -77,14 +79,14 @@ export default function Navbar() {
   };
 
   const links = [
-    { href: "#home", text: "Accueil" },
-    { href: "#me", text: "À propos" },
-    { href: "#skills", text: "Compétences" },
-    { href: "#projects", text: "Projets" },
-    { href: "#stage", text: "Stage" },
-    { href: "#certif", text: "Certifications" },
-    { href: "#veille", text: "Veille Informatique" },
-    { href: "#contact", text: "Contact" },
+    { href: "#home", text: t("navbar.home") },
+    { href: "#me", text: t("navbar.about") },
+    { href: "#skills", text: t("navbar.skills") },
+    { href: "#projects", text: t("navbar.projects") },
+    { href: "#stage", text: t("navbar.experience") },
+    { href: "#certif", text: t("navbar.certifications") },
+    { href: "#veille", text: t("navbar.veille") },
+    { href: "#contact", text: t("navbar.contact") },
   ];
 
   return (
